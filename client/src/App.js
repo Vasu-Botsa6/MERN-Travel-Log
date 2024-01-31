@@ -1,10 +1,7 @@
 import React from "react";
-// import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
 import { BrowserRouter, Route, Switch} from 'react-router-dom';
-
-// import { Redirect } from 'react-router-dom';
+import { Redirect } from 'react-router-dom';
 import {Link} from 'react-router-dom';
-
 
 import Users from "./user/pages/Users";
 import NewPlace from "./places/pages/NewPlace";
@@ -21,10 +18,10 @@ function App() {
         <Route path="/" exact>
           <Users/>
         </Route>
-        <Route path="/places/new" >
+        <Route path="/places/new" exact >
           <NewPlace />           
         </Route>
-        
+        <Redirect to="/" />
       </Switch>
     </main>
      </BrowserRouter>
